@@ -22,7 +22,7 @@ def main():
         print("\nerror: KNN traning was not successful\n")
         return
 
-    imgOriginalScene = cv2.imread(CURR_IMG_DIR + "12.png")
+    imgOriginalScene = cv2.imread(CURR_IMG_DIR + "1.png")
 
     if imgOriginalScene is None:
         print("\nerror: image not read from file \n\n")
