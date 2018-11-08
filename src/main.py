@@ -1,10 +1,8 @@
 import cv2
-import numpy as np
 import os
 
 from src import detect_chars
 from src import detect_plates
-from src import possible_plate
 
 SCALAR_BLACK = (0.0, 0.0, 0.0)
 SCALAR_WHITE = (255.0, 255.0, 255.0)
@@ -16,6 +14,7 @@ CURR_IMG_DIR = '/home/raghuvansh/PycharmProjects/License-Plate-Recognition/image
 
 showSteps = False
 
+
 def main():
     blnKNNTrainingSuccessful = detect_chars.loadKNNDataAndTrainKNN()
 
@@ -23,7 +22,7 @@ def main():
         print("\nerror: KNN traning was not successful\n")
         return
 
-    imgOriginalScene = cv2.imread(CURR_IMG_DIR + "15.png")
+    imgOriginalScene = cv2.imread(CURR_IMG_DIR + "12.png")
 
     if imgOriginalScene is None:
         print("\nerror: image not read from file \n\n")
