@@ -36,7 +36,7 @@ RESIZED_CHAR_IMAGE_HEIGHT = 30
 
 MIN_CONTOUR_AREA = 100
 
-CURR_UTIL_DIR = '/home/raghuvansh/PycharmProjects/License-Plate-Recognition/utils/'
+CURR_UTIL_DIR = '../utils/'
 
 
 def loadKNNDataAndTrainKNN():

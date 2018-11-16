@@ -10,10 +10,9 @@ SCALAR_YELLOW = (0.0, 255.0, 255.0)
 SCALAR_GREEN = (0.0, 255.0, 0.0)
 SCALAR_RED = (0.0, 0.0, 255.0)
 
-CURR_IMG_DIR = '/home/raghuvansh/PycharmProjects/License-Plate-Recognition/images/'
+CURR_IMG_DIR = '../images/'
 
 showSteps = False
-
 
 def main():
     blnKNNTrainingSuccessful = detect_chars.loadKNNDataAndTrainKNN()
