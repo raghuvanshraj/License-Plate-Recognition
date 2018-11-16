@@ -10,7 +10,7 @@ SCALAR_YELLOW = (0.0, 255.0, 255.0)
 SCALAR_GREEN = (0.0, 255.0, 0.0)
 SCALAR_RED = (0.0, 0.0, 255.0)
 
-CURR_IMG_DIR = '../images/'
+CURR_IMG_DIR = os.path.join(os.path.abspath(os.path.join(os.getcwd(), os.pardir)), 'images')
 
 showSteps = False
 
@@ -21,7 +21,7 @@ def main():
         print("\nerror: KNN traning was not successful\n")
         return
 
-    imgOriginalScene = cv2.imread(CURR_IMG_DIR + "1.png")
+    imgOriginalScene = cv2.imread(os.path.join(CURR_IMG_DIR, '1.png'))
 
     if imgOriginalScene is None:
         print("\nerror: image not read from file \n\n")

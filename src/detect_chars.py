@@ -36,7 +36,7 @@ RESIZED_CHAR_IMAGE_HEIGHT = 30
 
 MIN_CONTOUR_AREA = 100
 
-CURR_UTIL_DIR = '../utils/'
+CURR_UTIL_DIR = os.path.join(os.path.abspath(os.path.join(os.getcwd(), os.pardir)), 'utils')
 
 
 def loadKNNDataAndTrainKNN():
@@ -44,14 +44,14 @@ def loadKNNDataAndTrainKNN():
     validContoursWithData = []
 
     try:
-        npaClassifications = np.loadtxt(CURR_UTIL_DIR + "classifications.txt", np.float32)
+        npaClassifications = np.loadtxt(os.path.join(CURR_UTIL_DIR, 'classifications.txt'), np.float32)
     except:
         print("error, unable to open classifications.txt, exiting program\n")
         os.system("pause")
         return False
 
     try:
-        npaFlattenedImages = np.loadtxt(CURR_UTIL_DIR + "flattened_images.txt", np.float32)
+        npaFlattenedImages = np.loadtxt(os.path.join(CURR_UTIL_DIR, 'flattened_images.txt'), np.float32)
     except:
         print("error, unable to open flattened_images.txt, exiting program\n")
         os.system("pause")
